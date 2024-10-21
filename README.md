@@ -58,9 +58,39 @@ Emergency Signaling System </br>
 Weighing Machines </br>
 
 ## CIRCUIT DIAGRAM
+![Screenshot 2024-10-21 154929](https://github.com/user-attachments/assets/ee919537-3cee-40d5-91e3-57bc7824478c)
 
 ## PROGRAM
+```
+const int buttonpin=2;
+const int ledpin=13;
 
+int buttonstate=0;
+
+void setup() {
+  pinMode(ledpin,OUTPUT);
+  pinMode(buttonpin,INPUT);
+
+}
+
+void loop() {
+  buttonstate=digitalRead(buttonpin);
+  if(buttonstate==HIGH)
+  {
+    digitalWrite(ledpin,HIGH);
+  }
+  else
+  {
+    digitalWrite(ledpin,LOW);
+  }
+
+}
+```
 ## OUTPUT
+LED ON
+![Screenshot 2024-10-21 155030](https://github.com/user-attachments/assets/7d82030a-5517-420a-b95f-01766f91eb48)
+
+LED OFF
+![Screenshot 2024-10-21 155015](https://github.com/user-attachments/assets/86f5a59c-b7b8-49e9-869f-44e77dd83ab9)
 
 ## RESULT
